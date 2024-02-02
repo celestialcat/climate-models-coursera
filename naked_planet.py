@@ -12,8 +12,8 @@ def ArgumentSetup():
     choices=[
       'temperature', 
       'heat_content', 
-      'heat_flux'
-    ]
+      'heat_flux',
+    ],
     required=False,
     help='plot one of following: %(choices)'
   )
