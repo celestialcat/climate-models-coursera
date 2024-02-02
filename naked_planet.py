@@ -14,6 +14,7 @@ def ArgumentSetup():
       'heat_content', 
       'heat_flux',
     ],
+    type=str,
     required=False,
     help='plot one of following: %(choices)'
   )
