@@ -60,16 +60,22 @@ if __name__ == '__main__':
     nSteps = int(input(''))
     outputs = PlanetModel(nSteps)
     plt.plot(outputs[0], outputs[1])
+    plt.xlabel('Time (years)')
+    plt.ylabel('Temperature (K)')
     plt.show()
   elif args.plot == 'heat_content':
     nSteps = int(input(''))
     outputs = PlanetModel(nSteps)
     plt.plot(outputs[0], outputs[2])
+    plt.xlabel('Time (years)')
+    plt.ylabel('Heat content (J/m^2)')
     plt.show()
   elif args.plot == 'heat_flux':
     nSteps = int(input(''))
     outputs = PlanetModel(nSteps)
     plt.plot(outputs[0], outputs[3])
+    plt.xlabel('Time (years)')
+    plt.ylabel('Heat flux (W/m^2)')
     plt.show()
   elif args.plot == None:
     nSteps = int(input(''))
