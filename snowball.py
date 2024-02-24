@@ -147,4 +147,5 @@ def FeedbackModel(initial_albedo, n_iterations):
     
     return results
 
-model = FeedbackModel(0.15, 100)
+if __name__ == '__main__':
+    model = FeedbackModel(0.15, 100)
