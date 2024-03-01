@@ -47,7 +47,7 @@ def IceSheet(
 	
 	return results
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 
 	#years = float(input(''))
 	model = IceSheet(20000)
