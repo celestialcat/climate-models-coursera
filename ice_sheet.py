@@ -29,13 +29,13 @@ def IceSheet(
 	
 	# calculate elevation and flow over years
 	dx = x_width/n_x
-	results = {}
-	for year in np.arange(0, int(n_year/t_step)):
+	for step in np.arange(0, int((n_year+t_step)/t_step)):
+		year = step * t_step
 		for x in np.arange(0, n_x+1):
 			flow[x] = (elev[x]-elev[x+1])/dx * flow_param * (elev[x]+elev[x+1])/2/dx
 		for x in np.arange(1, n_x+1):
 			elev[x] = elev[x] + (snow_fall+flow[x-1]-flow[x]) * t_step
-			results[f'{year}'] = elev[5]
+		print('')
 		print('time:', year)
 		print('elevation', elev[5])
 		print('')
@@ -45,9 +45,8 @@ def IceSheet(
 		plt.pause(0.001)
 		fig.canvas.draw()
 	
-	return results
+	return None
 
 if __name__ == '__main__':
 
-	#years = float(input(''))
-	model = IceSheet(20000)
+	IceSheet(20000)
