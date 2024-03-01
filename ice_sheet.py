@@ -36,7 +36,9 @@ def IceSheet(
 		for x in np.arange(1, n_x+1):
 			elev[x] = elev[x] + (snow_fall+flow[x-1]-flow[x]) * t_step
 			results[f'{year}'] = elev[5]
-			print(year, elev[5])
+			print('time:', year)
+			print('elevation', elev[5])
+			print('')
 			ax.clear()
 			ax.plot(elev)
 			plt.show(block=False)
